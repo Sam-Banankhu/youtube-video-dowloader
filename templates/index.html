@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YouTube Downloader</title>
+</head>
+<body>
+    <h1>YouTube Downloader</h1>
+    <form action="/download" method="post">
+        <label for="url">YouTube URL:</label>
+        <input type="text" id="url" name="url" required><br>
+
+        <label for="download_type">Download Type:</label>
+        <select id="download_type" name="download_type" required>
+            <option value="video">Video</option>
+            <option value="mp3">MP3</option>
+        </select><br>
+
+        <input type="submit" value="Download">
+    </form>
+</body>
+</html>
