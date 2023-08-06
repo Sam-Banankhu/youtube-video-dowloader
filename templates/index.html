@@ -1,21 +1,14 @@
+<!-- templates/index.html -->
 <!DOCTYPE html>
 <html>
 <head>
-    <title>YouTube Downloader</title>
+    <title>TubeDL</title>
 </head>
 <body>
-    <h1>YouTube Downloader</h1>
-    <form action="/download" method="post">
-        <label for="url">Enter YouTube URL:</label>
-        <input type="text" id="url" name="url" required>
-        <br>
-        <label for="download_type">Select download type:</label>
-        <select id="download_type" name="download_type" required>
-            <option value="video">Video</option>
-            <option value="mp3">Audio (MP3)</option>
-        </select>
-        <br>
-        <input type="submit" value="Download">
+    <h1>TubeDL - YouTube Downloader</h1>
+    <form action="/search" method="post">
+        <input type="text" name="query" placeholder="Enter a song or video name">
+        <input type="submit" value="Search">
     </form>
 </body>
 </html>

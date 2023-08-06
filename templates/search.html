@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Results</title>
+</head>
+<body>
+    <h1>Search Results</h1>
+    <ul>
+        {% for result in results %}
+        <li>
+            {{ result.title }}
+            <form action="/download" method="get">
+                <input type="hidden" name="url" value="https://www.youtube.com/watch?v={{ result.video_id }}">
+                <input type="hidden" name="download_type" value="video">
+                <button type="submit">Download Video</button>
+            </form>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
