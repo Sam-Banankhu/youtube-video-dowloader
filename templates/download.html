@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Download</title>
+</head>
+<body>
+    <h1>Available Streams</h1>
+    <form action="/download_media" method="post">
+        <input type="hidden" name="url" value="{{ url }}">
+        <input type="hidden" name="download_type" value="{{ download_type }}">
+        <label for="selected_stream">Select the stream quality/format:</label>
+        <select id="selected_stream" name="selected_stream" required>
+            {% for stream in streams %}
+            <option value="{{ stream.itag }}">{{ stream.resolution }} - {{ stream.mime_type }}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <input type="submit" value="Download">
+    </form>
+</body>
+</html>
